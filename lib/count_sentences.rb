@@ -8,14 +8,13 @@ class String
 
   def question?
     self.end_with?("?")
-
   end
 
   def exclamation?
-
+    self.end_with?("!")
   end
 
   def count_sentences
-
+    self.scan(/[^\.!?]+[\.!?]/).map(&:strip).count
   end
 end
